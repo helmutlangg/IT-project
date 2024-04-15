@@ -12,8 +12,8 @@ body {
 }
 
 .nav {
-    background-color: #595959;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     list-style: none;
     text-align: center;
     padding: 20px 0 20px 0;
@@ -21,13 +21,34 @@ body {
 
 .nav > li {
     display: inline-block;
-    padding-right: 50px;
+    padding: 0 25px 0 25px;
+    font-size: 12px;
 }
+
+.nav > li > a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav > li > a:hover {
+    color: #c1c1c1
+}
+
+.logo {
+    color: #000000;
+    float: left;
+    padding-left: 25px;
+}
+
 
 </style>
     </head>
 <body>
     <ul class="nav">
+
+        <div class="logo">
+        LOGO
+    </div>
         <li><a href="#">Home</a></li>
         <li><a href="#">Buy</a></li>
         <li><a href="#">Sell</a></li>
