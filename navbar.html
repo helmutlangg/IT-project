@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>NAVBAR</title>
+        <title>RealityRealtors</title>
 <style>
 
 body {
@@ -16,7 +16,7 @@ body {
     color: #000000;
     list-style: none;
     text-align: center;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 0 0;
 }
 
 .nav > li {
@@ -38,22 +38,50 @@ body {
     color: #000000;
     float: left;
     padding-left: 25px;
+    font-size: 16px;
+    font-weight: bold; 
+}
+
+.logo > a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.banner {
+    width: 100%;
+    display: block;
+}
+
+.banner > .banner-image {
+    width: 100%;
+    display: block;
 }
 
 
 </style>
     </head>
 <body>
+    <!-- navigation bar -->
     <ul class="nav">
 
+        <!-- logo -->
         <div class="logo">
-        LOGO
+            <a href="#">RealityRealtors</a>
     </div>
+    <!-- end of logo -->
         <li><a href="#">Home</a></li>
         <li><a href="#">Buy</a></li>
         <li><a href="#">Sell</a></li>
         <li><a href="#">Mortgage</a></li>
         <li><a href="#">Contact Us</a></li>
     </ul>
+    <!-- end of navigation bar -->
+    
+    <!-- banner section-->
+    <div class="banner">
+        <img class="banner-image" src="/img/banner1.jpeg">
+    </div>
+    <!-- end of banner section -->
+    <div class="heading"></div>
 </body>
 </html>
