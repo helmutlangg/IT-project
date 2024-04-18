@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
 Requirements:
 
@@ -22,91 +22,108 @@ Requirements:
         - meta tags
         - create a graphic title or logo
 -->
-<html>
+
 <head>
-<meta charset="utf-8">
-<title>Home Page</title>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
+    <meta name="description" content="">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
 
-<!--css here-->
-<style>
+        /* Styling that overrules everything else */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: #24252A;
 
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-}
 
-header {
-    background-color: #050101;
-    color: #940606;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        li,
+        a,
+        button {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #edf0f1;
+            text-decoration: none;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+        }
 
-nav ul li a {
-    color: #2b0ac2;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 18px;
-}
+        /* When hovering over the logo it will show the cursor */
+        .logo {
+            cursor: pointer;
+        }
 
-/* banner on hover */
-nav ul li a:hover {
-    color: orange;
-}
+        .nav {
+            list-style: none;
+        }
 
-.logo {
-    color: #000000;
-    float: left;
-}
+        /* target each individual item */
+        .nav li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
 
-</style>
-	</head>
+        .nav li a {
+            transition: all 0.3s ease 0s;
+        }
+
+        .nav li a:hover {
+            color: #0088a9
+        }
+
+        button {
+            padding: 9px 25px;
+            background-color: rgba(0, 136, 169, 1);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+
+        button:hover {
+            background-color: rgba(0, 136, 169, 0.8);
+        }
+
+        .disclaimer {
+            font-size: 2px;
+            text-align: center;
+        }
+    </style>
+</head>
+
 <body>
-
-<header>
-<!--	<h1>Realtor Website</h1> -->
+    <header>
+        <a href="index.html">
+            <img class="logo" src="images/logo.jpg" alt="RealityRealtors">
+        </a>
         <nav>
-            <ul>
-			    <li><a href="index.html">Home</a></li> <!-- second page is items or services -->
-                <li><a href="/project/buy.html">Buy / Sell</a></li> <!-- second page is items or services -->
-                <li><a href="/project/contact_us.html">Contact Us</a></li> <!-- last page is info about location -->
+            <ul class="nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/project/buy.html">Buy</a></li>
+                <li><a href="#">About Us</a></li>
             </ul>
         </nav>
-</header>
+        <a class="cta" href="#"><button>Contact</button></a>
+    </header>
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- Begin Required Disclaimer Text (you may re-style this text) -->
-<hr />
-<center>
-<u><strong>Disclaimer</strong></u><br />
-THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
-HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
-SOLELY RESPONSIBLE FOR THE CONTENT.<br />
-</center>
-<!-- End Required Disclaimer Text -->
+    <!-- Begin Required Disclaimer Text (you may re-style this text) -->
+    <div class="disclaimer">
+        <u><strong>Disclaimer</strong></u><br />
+        THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
+        HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
+        SOLELY RESPONSIBLE FOR THE CONTENT.<br />
+        <!-- End Required Disclaimer Text -->
+    </div>
 </body>
+
 </html>

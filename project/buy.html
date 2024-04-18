@@ -1,76 +1,135 @@
-<html>
-<head>
-<meta charset="utf-8">
-<title>Home Page</title>
+<!DOCTYPE html>
+<!--
+Requirements:
 
-<!--css here-->
-<style>
+- Homepage that showcases the business
+- Second page is items or services we provide
+- Third page is info about location, hours open, community involvement, etc.
 
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-}
+    TODO reqs: 
+        - Heading tags
+        - Title tags
+        - A table
+        - At least one div tag
+        - an un-ordered and ordered list
+        - an image on each page
+        - logo is a separate requirement
+        - one image a hyperlink
+            - make logo hyperlink
+        - one external hyperlink
+        - three button tags
+        - embedded map
+        - meta tags
+        - create a graphic title or logo
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Navbar</title>
+        <meta name="description" content="">
+        <title>Document</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
 
-header {
-    background-color: #050101;
-    color: #940606;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #2b0ac2;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 18px;
-}
-
-/* banner on hover */
-nav ul li a:hover {
-    color: orange;
-}
+        /* Styling that overrules everything else */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: #24252A;
 
 
+        }
 
-</style>
-	</head>
+        li, a, button {
+            font-family: "Montseratt", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #edf0f1;
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+        }
+
+        /* When hovering over the logo it will show the cursor */
+        .logo {
+            cursor: pointer;
+        }
+
+        .nav {
+            list-style: none;
+        }
+
+        /* target each individual item */
+        .nav li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        .nav li a {
+            transition: all 0.3s ease 0s;
+        }
+
+        .nav li a:hover {
+            color: #0088a9
+        }
+
+        button {
+            padding: 9px 25px;
+            background-color: rgba(0,136,169,1);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+
+        button:hover {
+            background-color: rgba(0,136,169,0.8);
+        }
+
+        .disclaimer {
+            font-size: 2px;
+            text-align: center;
+        }
+
+        </style>
+    </head>
 <body>
+    <header>
+        <img class="logo" src="images/logo.jpg" alt="RealityRealtors">
 
-<header>
-	<h1>Realtor Website</h1>
         <nav>
-            <ul>
-			    <li><a href="/index.html">Home</a></li> <!-- second page is items or services -->
-                <li><a href="/project/buy.html">Buy / Sell</a></li> <!-- second page is items or services -->
-                <li><a href="/project/contact_us.html">Contact Us</a></li> <!-- last page is info about location -->
+            <ul class="nav">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/project/buy.html">Buy</a></li>
+                <li><a href="#">About</a></li>
             </ul>
         </nav>
-</header>
+            <a class="cta" href="#"><button>Contact</button></a>
+    </header>
+    <div class="banner-area">
+        <h2>this is the banner</h2>
+    </div>
+    <div class="text-area">
+        <div class="wrapper">
+            <h2>Content Area</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem iusto, non veritatis soluta, dolore ut natus neque cum impedit nihil, perspiciatis quae. Sunt minus aliquid maxime facilis laudantium natus veniam.</p>
+        </div>
+    </div>
 
 
 
 <!-- Begin Required Disclaimer Text (you may re-style this text) -->
-<hr />
-<center>
-<u><strong>Disclaimer</strong></u><br />
-THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
-HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
-SOLELY RESPONSIBLE FOR THE CONTENT.<br />
-</center>
-<!-- End Required Disclaimer Text -->
-</body>
-</html>
+<div class="disclaimer">
+        <u><strong>Disclaimer</strong></u><br />
+        THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
+        HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
+        SOLELY RESPONSIBLE FOR THE CONTENT.<br />
+    <!-- End Required Disclaimer Text -->
+        </body>
+    </html>
+</div>
