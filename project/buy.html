@@ -1,74 +1,168 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Home Page</title>
+    <meta charset="UTF-8">
+    <title>Fixed Header with html and css | Collapsing Header Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!--
+		1. Keywords
+		2. Descriptions
+		3. Author
+	 -->
+    <meta name="AUTHOR" content="Jonathan">
+    <meta name="description" content="">
 
-<!--css here-->
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-}
+        body {
+            text-align: center;
+        }
 
-header {
-    background-color: #050101;
-    color: #940606;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+        .wrapper {
+            width: 1170px;
+            margin: 0 auto;
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        header {
+            height: 100px;
+            background: #262626;
+            width: 100%;
+            z-index: 10;
+            position: fixed;
+        }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
+        .logo {
+            width: 30%;
+            float: left;
+            line-height: 100px;
+            cursor: pointer;
+        }
 
-nav ul li a {
-    color: #2b0ac2;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 18px;
-}
+        .logo a {
+            text-decoration: none;
+            font-size: 30px;
+            font-family: poppins;
+            color: #fff;
+            letter-spacing: 5px;
+        }
 
-/* banner on hover */
-nav ul li a:hover {
-    color: orange;
-}
+        nav {
+            float: right;
+            line-height: 100px;
+        }
 
-</style>
-	</head>
+        nav a {
+            text-decoration: none;
+            font-family: poppins;
+            letter-spacing: 4px;
+            font-size: 20px;
+            margin: 0 10px;
+            color: #fff;
+        }
+
+        nav a:hover {
+            color: #0088a9;
+        }
+
+        .logo a:hover {
+            color: #0088a9;
+        }
+
+        .banner-area {
+            width: 100%;
+            height: 500px;
+            position: fixed;
+            top: 100px;
+            background-image: url(/images/1.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .banner-area h2 {
+            padding-top: 8%;
+            font-size: 70px;
+            font-family: poppins;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .content-area {
+            width: 100%;
+            position: relative;
+            top: 450px;
+            background: #ebebeb;
+            height: 1500px;
+        }
+
+        .content-area h2 {
+            font-family: poppins;
+            letter-spacing: 4px;
+            padding-top: 30px;
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .content-area p {
+            padding: 2% 0px;
+            font-family: poppins;
+            line-height: 30px;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 2px;
+        }
+    </style>
+</head>
+
+
 <body>
-
-<header>
-	<h1>Realtor Website</h1>
-        <nav>
-            <ul>
-			    <li><a href="/index.html">Home</a></li> <!-- second page is items or services -->
-                <li><a href="/project/buy.html">Buy / Sell</a></li> <!-- second page is items or services -->
-                <li><a href="/project/contact_us.html">Contact Us</a></li> <!-- last page is info about location -->
-            </ul>
-        </nav>
-</header>
-
-
-
-<!-- Begin Required Disclaimer Text (you may re-style this text) -->
-<hr />
-<center>
-<u><strong>Disclaimer</strong></u><br />
-THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
-HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
-SOLELY RESPONSIBLE FOR THE CONTENT.<br />
-</center>
-<!-- End Required Disclaimer Text -->
+    <div class="box-area">
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="/index.html">RealityRealtors</a>
+                </div>
+                <nav>
+                    <a href="/index.html">Home</a>
+                    <a href="/project/buy.html">Buy</a>
+                    <a href="#">About</a>
+                    <a href="/project/contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <div class="banner-area">
+            <h2>Buy Property</h2>
+        </div>
+        <div class="content-area">
+            <div class="wrapper">
+                <h2>content area</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
+                    saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
+                    perspiciatis suscipit voluptatibus! Ad alias assumenda autem deleniti esse est excepturi hic itaque,
+                    magnam magni nam officia provident quae recusandae reiciendis rem sed. Adipisci animi aut autem
+                    deserunt dolore, ea eius error ex facilis inventore ipsum minus modi nihil nostrum nulla, obcaecati
+                    porro reprehenderit repudiandae sed sint sunt tempore vero. At dolores doloribus, dolorum ea eaque
+                    hic ipsa iusto libero minus natus neque nisi nobis nostrum odio optio pariatur perspiciatis
+                    praesentium rerum sapiente.</p>
+                <!-- Begin Required Disclaimer Text (you may re-style this text) -->
+                <div class="disclaimer">
+                    <u><strong>Disclaimer</strong></u><br />
+                    THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
+                    HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
+                    SOLELY RESPONSIBLE FOR THE CONTENT.<br />
+                    <!-- End Required Disclaimer Text -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>

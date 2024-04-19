@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fixed Header with html and css | Collapsing Header Tutorial</title>
+
+    <meta name="AUTHOR" content="Jonathan">
+    <meta name="description" content="">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .wrapper {
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        header {
+            height: 100px;
+            background: #262626;
+            width: 100%;
+            z-index: 10;
+            position: fixed;
+        }
+
+        .logo {
+            width: 30%;
+            float: left;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        .logo a {
+            text-decoration: none;
+            font-size: 30px;
+            font-family: poppins;
+            color: #fff;
+            letter-spacing: 5px;
+        }
+
+        nav {
+            float: right;
+            line-height: 100px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-family: poppins;
+            letter-spacing: 4px;
+            font-size: 20px;
+            margin: 0 10px;
+            color: #fff;
+        }
+
+        nav a:hover {
+            color: #0088a9;
+        }
+
+        .logo a:hover {
+            color: #0088a9;
+        }
+
+        .banner-area {
+            width: 100%;
+            height: 500px;
+            position: fixed;
+            top: 100px;
+            background-image: url(/images/1.jpg);
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .banner-area h2 {
+            padding-top: 8%;
+            font-size: 70px;
+            font-family: poppins;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .content-area {
+            width: 100%;
+            position: relative;
+            top: 450px;
+            background: #ebebeb;
+            height: 1500px;
+        }
+
+        .content-area h2 {
+            font-family: poppins;
+            letter-spacing: 4px;
+            padding-top: 30px;
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .content-area p {
+            padding: 2% 0px;
+            font-family: poppins;
+            line-height: 30px;
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 2px;
+        }
+
+        .mapouter {
+            position: relative;
+            text-align: right;
+            width: 100%;
+            height: 400px;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            width: 100%;
+            height: 400px;
+        }
+
+        .gmap_iframe {
+            height: 400px !important;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="box-area">
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="/index.html">RealityRealtors</a>
+                </div>
+                <nav>
+                    <a href="/index.html">Home</a>
+                    <a href="/project/buy.html">Buy</a>
+                    <a href="#">About</a>
+                    <a href="/project/contact.html">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <div class="banner-area">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="content-area">
+            <div class="wrapper">
+                <h2>content area</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
+                    saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
+                    perspiciatis suscipit voluptatibus! Ad alias assumenda autem deleniti esse est excepturi hic itaque,
+                    magnam magni nam officia provident quae recusandae reiciendis rem sed. Adipisci animi aut autem
+                    deserunt dolore, ea eius error ex facilis inventore ipsum minus modi nihil nostrum nulla, obcaecati
+                    porro reprehenderit repudiandae sed sint sunt tempore vero. At dolores doloribus, dolorum ea eaque
+                    hic ipsa iusto libero minus natus neque nisi nobis nostrum odio optio pariatur perspiciatis
+                    praesentium rerum sapiente.</p>
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0"
+                            src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Roswell St, Marietta, Georgia&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                            href="https://embed-googlemap.com">embed-googlemap.com</a>
+                    </div>
+                    <!-- Begin Required Disclaimer Text (you may re-style this text) -->
+                    <div class="disclaimer">
+                        <br><u><strong>Disclaimer</strong></u><br />
+                        THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
+                        HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
+                        SOLELY RESPONSIBLE FOR THE CONTENT.<br />
+                        <!-- End Required Disclaimer Text -->
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

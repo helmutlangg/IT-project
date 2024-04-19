@@ -5,6 +5,37 @@
 	<meta charset="UTF-8">
 	<title>Fixed Header with html and css | Collapsing Header Tutorial</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!--
+		1. Keywords
+		2. Descriptions
+		3. Author
+	 -->
+
+	<!--
+	Requirements:
+
+	- Homepage that showcases the business
+	- Second page is items or services we provide
+	- Third page is info about location, hours open, community involvement, etc.
+
+    TODO reqs: 
+        - Heading tags ✔
+        - Title tags ✔
+        - A table
+        - At least one div tag ✔
+        - an un-ordered and ordered list
+        - an image on each page ✔
+        - logo is a separate requirement
+        - one image a hyperlink
+            - make logo hyperlink ✔
+        - one external hyperlink 
+        - three button tags ✔
+        - embedded map ✔
+        - meta tags 1/2 ✔
+        - create a graphic title or logo
+-->
+	<meta name="AUTHOR" content="Jonathan">
+	<meta name="description" content="">
 
 	<style>
 		* {
@@ -62,6 +93,10 @@
 			color: #0088a9;
 		}
 
+		.logo a:hover {
+			color: #0088a9;
+		}
+
 		.banner-area {
 			width: 100%;
 			height: 500px;
@@ -102,6 +137,11 @@
 			font-family: poppins;
 			line-height: 30px;
 		}
+
+		.disclaimer {
+			text-align: center;
+			font-size: 2px;
+		}
 	</style>
 </head>
 
@@ -112,17 +152,18 @@
 			<div class="wrapper">
 				<div class="logo">
 					<a href="/index.html">RealityRealtors</a>
+					<img class="logo" src="/images/logo.png" alt="RealityRealtors logo">
 				</div>
 				<nav>
 					<a href="/index.html">Home</a>
-					<a href="#">Buy</a>
+					<a href="/project/buy.html">Buy</a>
 					<a href="#">About</a>
-					<a href="#">Contact</a>
+					<a href="/project/contact.html">Contact</a>
 				</nav>
 			</div>
 		</header>
 		<div class="banner-area">
-			<h2>this is banner</h2>
+			<h2>Placeholder</h2>
 		</div>
 		<div class="content-area">
 			<div class="wrapper">
@@ -135,6 +176,23 @@
 					porro reprehenderit repudiandae sed sint sunt tempore vero. At dolores doloribus, dolorum ea eaque
 					hic ipsa iusto libero minus natus neque nisi nobis nostrum odio optio pariatur perspiciatis
 					praesentium rerum sapiente.</p>
+
+
+
+
+
+
+
+
+
+				<!-- Begin Required Disclaimer Text (you may re-style this text) -->
+				<div class="disclaimer">
+					<u><strong>Disclaimer</strong></u><br />
+					THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
+					HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
+					SOLELY RESPONSIBLE FOR THE CONTENT.<br />
+					<!-- End Required Disclaimer Text -->
+				</div>
 			</div>
 		</div>
 	</div>
