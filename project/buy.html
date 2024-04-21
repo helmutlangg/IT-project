@@ -1,168 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="real estate, property, homes, houses, buy, sell, Realtors, Marietta, Georgia, community involvement"
+    />
+    <meta
+      name="description"
+      content="Real Realtors is dedicated to providing exceptional real estate services in Marietta, Georgia. 
+        With over 20 years of experience, our team helps you buy or sell properties with personalized attention and expert advice. 
+        Contact us today for all your real estate needs."
+    />
+    <title>Properties</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon for the browser tab
+     https://www.w3schools.com/html/html_favicon.asp-->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
 
-<head>
-    <meta charset="UTF-8">
-    <title>Fixed Header with html and css | Collapsing Header Tutorial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <!--
-		1. Keywords
-		2. Descriptions
-		3. Author
-	 -->
-    <meta name="AUTHOR" content="Jonathan">
-    <meta name="description" content="">
+	Requirements:
+
+	- Homepage that showcases the business
+	- Second page is items or services we provide
+	- Third page is info about location, hours open, community involvement, etc.
+
+    TODO reqs: 
+        - Heading tags ✔
+        - Title tags ✔
+        - A table
+        - At least one div tag ✔
+        - an un-ordered and ordered list
+             unordered ✔ ordered
+        - an image on each page ✔
+        - logo is a separate requirement ✔
+        - one image a hyperlink ✔
+            - make logo hyperlink ✔
+        - one external hyperlink 
+        - three button tags ✔
+        - embedded map ✔
+        - meta tags 1/2 ✔
+        - create a graphic title or logo ✔
+-->
+    <meta name="AUTHOR" content="Jonathan" />
+    <meta name="description" content="" />
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        body {
-            text-align: center;
-        }
+      body {
+        text-align: center;
+      }
 
-        .wrapper {
-            width: 1170px;
-            margin: 0 auto;
-        }
+      .wrapper {
+        width: 1170px;
+        margin: 0 auto;
+      }
 
-        header {
-            height: 100px;
-            background: #262626;
-            width: 100%;
-            z-index: 10;
-            position: fixed;
-        }
+      header {
+        height: 100px;
+        background: #262626;
+        width: 100%;
+        z-index: 10;
+        position: fixed;
+      }
 
-        .logo {
-            width: 30%;
-            float: left;
-            line-height: 100px;
-            cursor: pointer;
-        }
+      .logo img {
+        height: auto;
+        float: left;
+      }
 
-        .logo a {
-            text-decoration: none;
-            font-size: 30px;
-            font-family: poppins;
-            color: #fff;
-            letter-spacing: 5px;
-        }
+      nav {
+        float: right;
+        line-height: 100px;
+        display: flex;
+      }
 
-        nav {
-            float: right;
-            line-height: 100px;
-        }
+      nav a {
+        text-decoration: none;
+        font-family: poppins;
+        letter-spacing: 4px;
+        font-size: 20px;
+        margin: 0 10px;
+        color: #fff;
+      }
 
-        nav a {
-            text-decoration: none;
-            font-family: poppins;
-            letter-spacing: 4px;
-            font-size: 20px;
-            margin: 0 10px;
-            color: #fff;
-        }
+      .banner-area {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 100px;
+        background-image: url(/images/1.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+      }
 
-        nav a:hover {
-            color: #0088a9;
-        }
+      .banner-area h2 {
+        padding-top: 8%;
+        font-size: 70px;
+        font-family: poppins;
+        text-transform: uppercase;
+        color: #fff;
+      }
 
-        .logo a:hover {
-            color: #0088a9;
-        }
+      /* the space where the banner image goes */
+      .content-area {
+        width: 100%;
+        position: relative;
+        top: 600px;
+        background: #ebebeb;
+        height: 1500px;
+      }
 
-        .banner-area {
-            width: 100%;
-            height: 500px;
-            position: fixed;
-            top: 100px;
-            background-image: url(/images/1.jpg);
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-position: center center;
-        }
+      /* the banner header text */
+      .content-area h2 {
+        font-family: poppins;
+        letter-spacing: 4px;
+        padding-top: 30px;
+        font-size: 40px;
+        margin: 0;
+      }
 
-        .banner-area h2 {
-            padding-top: 8%;
-            font-size: 70px;
-            font-family: poppins;
-            text-transform: uppercase;
-            color: #fff;
-        }
+      .content-area p {
+        padding: 2% 0px;
+        font-family: poppins;
+        line-height: 30px;
+      }
 
-        .content-area {
-            width: 100%;
-            position: relative;
-            top: 450px;
-            background: #ebebeb;
-            height: 1500px;
-        }
+      .disclaimer {
+        font-size: 12px;
+        margin-top: 50px;
+        text-align: center;
+      }
 
-        .content-area h2 {
-            font-family: poppins;
-            letter-spacing: 4px;
-            padding-top: 30px;
-            font-size: 40px;
-            margin: 0;
-        }
+      /* property styling */
+      .property {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
 
-        .content-area p {
-            padding: 2% 0px;
-            font-family: poppins;
-            line-height: 30px;
-        }
+      .property img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
 
-        .disclaimer {
-            text-align: center;
-            font-size: 2px;
-        }
+      .property h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .property p {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .property .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .property .description {
+        margin-bottom: 20px;
+      }
+
+      .property .details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .property {
+        display: flex;
+      }
+
+      .property img {
+        flex: 0 0 40%;
+        margin-right: 20px;
+      }
+
+      .property .details {
+        flex: 1;
+      }
     </style>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <div class="box-area">
-        <header>
-            <div class="wrapper">
-                <div class="logo">
-                    <a href="/index.html">RealityRealtors</a>
-                </div>
-                <nav>
-                    <a href="/index.html">Home</a>
-                    <a href="/project/buy.html">Buy</a>
-                    <a href="#">About</a>
-                    <a href="/project/contact.html">Contact</a>
-                </nav>
-            </div>
-        </header>
-        <div class="banner-area">
-            <h2>Buy Property</h2>
+      <header>
+        <div class="wrapper">
+          <div class="logo">
+            <a href="/index.html" class="logo">
+              <img src="/images/logo.png" alt="RealityRealtors logo" />
+            </a>
+          </div>
+          <nav>
+            <a href="/index.html">Home</a>
+            <a href="/project/buy.html">Buy</a>
+            <a href="/project/contact.html">Contact</a>
+          </nav>
         </div>
-        <div class="content-area">
-            <div class="wrapper">
-                <h2>content area</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
-                    saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
-                    perspiciatis suscipit voluptatibus! Ad alias assumenda autem deleniti esse est excepturi hic itaque,
-                    magnam magni nam officia provident quae recusandae reiciendis rem sed. Adipisci animi aut autem
-                    deserunt dolore, ea eius error ex facilis inventore ipsum minus modi nihil nostrum nulla, obcaecati
-                    porro reprehenderit repudiandae sed sint sunt tempore vero. At dolores doloribus, dolorum ea eaque
-                    hic ipsa iusto libero minus natus neque nisi nobis nostrum odio optio pariatur perspiciatis
-                    praesentium rerum sapiente.</p>
-                <!-- Begin Required Disclaimer Text (you may re-style this text) -->
-                <div class="disclaimer">
-                    <u><strong>Disclaimer</strong></u><br />
-                    THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
-                    HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
-                    SOLELY RESPONSIBLE FOR THE CONTENT.<br />
-                    <!-- End Required Disclaimer Text -->
-                </div>
+      </header>
+      <div class="banner-area">
+        <h2>RealRealtors listings</h2>
+      </div>
+      <div class="content-area">
+        <div class="wrapper">
+          <h2>Our Featured Properties</h2>
+          <!-- houses -->
+          <div class="property">
+            <img src="/images/home1.jpg" alt="House 1" />
+            <div class="details">
+              <div class="info">
+                <h2>Single Family Home</h2>
+                <p class="description">
+                  This is not a real house listing please do not click view
+                  details as the link does not work.
+                </p>
+                <p class="price">$229,000</p>
+              </div>
+              <button>View Details</button>
             </div>
-        </div>
-    </div>
-    </div>
-</body>
+          </div>
+          <div class="property">
+            <img src="/images/home2.jpg" alt="House 2" />
+            <div class="details">
+              <div class="info">
+                <h2>Single Family Home</h2>
+                <p class="description">
+                  This is not a real house listing please do not click view
+                  details as the link does not work.
+                </p>
+                <p class="price">$279,000</p>
+              </div>
+              <button>View Details</button>
+            </div>
+          </div>
+          <div class="property">
+            <img src="/images/home3.jpg" alt="House 3" />
+            <div class="details">
+              <div class="info">
+                <h2>Single Family Home</h2>
+                <p class="description">
+                  This is not a real house listing please do not click view
+                  details as the link does not work.
+                </p>
+                <p class="price">$299,000</p>
+              </div>
+              <button>View Details</button>
+            </div>
+          </div>
+          <!-- end house html -->
 
+          <!-- Begin Required Disclaimer Text (you may re-style this text) -->
+          <div class="disclaimer">
+            <u><strong>Disclaimer</strong></u
+            ><br />
+            THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or
+            UNG<br />
+            HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

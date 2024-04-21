@@ -1,201 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="real estate, property, homes, houses, buy, sell, Realtors, Marietta, Georgia, community involvement"
+    />
+    <meta name="AUTHOR" content="Jonathan" />
+    <meta
+      name="description"
+      content="Real Realtors is dedicated to providing exceptional real estate services in Marietta, Georgia. 
+		With over 20 years of experience, our team helps you buy or sell properties with personalized attention and expert advice. 
+		Contact us today for all your real estate needs."
+    />
+    <title>Homepage</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- browser icon image
+		https://www.w3schools.com/html/html_favicon.asp
+	-->
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
 
-<head>
-	<meta charset="UTF-8">
-	<title>Fixed Header with html and css | Collapsing Header Tutorial</title>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<!--
-		1. Keywords
-		2. Descriptions
-		3. Author
-	 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-	<!--
-	Requirements:
+      body {
+        text-align: center;
+      }
 
-	- Homepage that showcases the business
-	- Second page is items or services we provide
-	- Third page is info about location, hours open, community involvement, etc.
+      .wrapper {
+        width: 1170px;
+        margin: 0 auto;
+      }
 
-    TODO reqs: 
-        - Heading tags ✔
-        - Title tags ✔
-        - A table
-        - At least one div tag ✔
-        - an un-ordered and ordered list
-        - an image on each page ✔
-        - logo is a separate requirement
-        - one image a hyperlink
-            - make logo hyperlink ✔
-        - one external hyperlink 
-        - three button tags ✔
-        - embedded map ✔
-        - meta tags 1/2 ✔
-        - create a graphic title or logo
--->
-	<meta name="AUTHOR" content="Jonathan">
-	<meta name="description" content="">
+      header {
+        height: 100px;
+        background: #262626;
+        width: 100%;
+        z-index: 10;
+        position: fixed;
+      }
 
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-		}
+      .logo img {
+        height: auto;
+        float: left;
+      }
 
-		body {
-			text-align: center;
-		}
+      nav {
+        float: right;
+        line-height: 100px;
+        display: flex;
+      }
 
-		.wrapper {
-			width: 1170px;
-			margin: 0 auto;
-		}
+      nav a {
+        text-decoration: none;
+        font-family: poppins;
+        letter-spacing: 4px;
+        font-size: 20px;
+        margin: 0 10px;
+        color: #fff;
+      }
 
-		header {
-			height: 100px;
-			background: #262626;
-			width: 100%;
-			z-index: 10;
-			position: fixed;
-		}
+      .banner-area {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 100px;
+        background-image: url(/images/1.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+      }
 
-		.logo {
-			width: 30%;
-			float: left;
-			line-height: 100px;
-			cursor: pointer;
-		}
+      .banner-area h2 {
+        padding-top: 8%;
+        font-size: 70px;
+        font-family: poppins;
+        text-transform: uppercase;
+        color: #fff;
+      }
 
-		.logo a {
-			text-decoration: none;
-			font-size: 30px;
-			font-family: poppins;
-			color: #fff;
-			letter-spacing: 5px;
-		}
+      /* the space where the banner image goes */
+      .content-area {
+        width: 100%;
+        position: relative;
+        top: 600px;
+        background: #ebebeb;
+        height: 1500px;
+      }
 
-		nav {
-			float: right;
-			line-height: 100px;
-		}
+      /* the banner header text */
+      .content-area h2 {
+        font-family: poppins;
+        letter-spacing: 4px;
+        padding-top: 30px;
+        font-size: 40px;
+        margin: 0;
+      }
 
-		nav a {
-			text-decoration: none;
-			font-family: poppins;
-			letter-spacing: 4px;
-			font-size: 20px;
-			margin: 0 10px;
-			color: #fff;
-		}
+      .content-area p {
+        padding: 2% 0px;
+        font-family: poppins;
+        line-height: 30px;
+      }
 
-		nav a:hover {
-			color: #0088a9;
-		}
+      .disclaimer {
+        font-size: 12px;
+        margin-top: 50px;
+        text-align: center;
+      }
 
-		.logo a:hover {
-			color: #0088a9;
-		}
+      /* property of the day css */
+      .property-listings {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; /* center items horizontally */
+        margin-top: 30px;
+      }
 
-		.banner-area {
-			width: 100%;
-			height: 500px;
-			position: fixed;
-			top: 100px;
-			background-image: url(/images/1.jpg);
-			-webkit-background-size: cover;
-			background-size: cover;
-			background-position: center center;
-		}
+      .property {
+        position: relative; /* makes sure when adding more it doesnt break */
+        width: 300px; /* set width on each item */
+        overflow: hidden; /* makes sure it doesnt break */
+        border-radius: 5px;
+      }
 
-		.banner-area h2 {
-			padding-top: 8%;
-			font-size: 70px;
-			font-family: poppins;
-			text-transform: uppercase;
-			color: #fff;
-		}
+      .property img {
+        width: 100%; /* make sure images fill screen */
+        border-radius: 5px;
+      }
 
-		.content-area {
-			width: 100%;
-			position: relative;
-			top: 450px;
-			background: #ebebeb;
-			height: 1500px;
-		}
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* semi-transparent  background */
+        padding: 10px;
+        color: #fff;
+        text-align: center;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease; /* smooth transition on opacty */
+      }
 
-		.content-area h2 {
-			font-family: poppins;
-			letter-spacing: 4px;
-			padding-top: 30px;
-			font-size: 40px;
-			margin: 0;
-		}
+      .property:hover .overlay {
+        opacity: 1; /* show on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-area">
+      <header>
+        <div class="wrapper">
+          <div class="logo">
+            <a href="/index.html" class="logo">
+              <img src="/images/logo.png" alt="RealRealtors logo" />
+            </a>
+          </div>
+          <nav>
+            <a href="/index.html">Home</a>
+            <a href="/project/buy.html">Buy</a>
+            <a href="/project/contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <div class="banner-area">
+        <h2>RealRealtors</h2>
+      </div>
+      <div class="content-area">
+        <div class="wrapper">
+          <h2>Properties of the Day</h2>
+          <div class="property-listings">
+            <div class="property">
+              <a href="/project/buy.html">
+                <img src="/images/home1.jpg" alt="Property 1" />
+                <div class="overlay">
+                  <h3>1377 Pair St SE, Marietta, GA 30008</h3>
+                  <p>Bedrooms: 2 | Bathrooms: 1</p>
+                  <p>Price: $229,000</p>
+                </div>
+              </a>
+            </div>
+            <div class="property">
+              <a href="/project/buy.html">
+                <img src="/images/home2.jpg" alt="Property 2" />
+                <div class="overlay">
+                  <h3>2478 Arkose Dr SW, Marietta, GA 30060</h3>
+                  <p>Bedrooms: 3 | Bathrooms: 1</p>
+                  <p>Price: $279,000</p>
+                </div>
+              </a>
+            </div>
+          </div>
 
-		.content-area p {
-			padding: 2% 0px;
-			font-family: poppins;
-			line-height: 30px;
-		}
+          <h2>About Us</h2>
+          <p>
+            At RealRealtors, we pride ourselves on providing exceptional service
+            to our clients.
+            <br />
+            With over 20 years of experience in the real estate industry,<br />
+            our team is dedicated to helping you find the perfect home or
+            property to meet your needs.
+          </p>
+          <h2>Our Mission</h2>
+          <p>
+            Our mission is to make the process of buying or selling a home as
+            smooth and stress-free as possible for our clients.<br />
+            We strive to provide personalized attention and expert advice to
+            help you achieve your real estate goals.
+          </p>
+          <h2>Contact Us</h2>
+          <p>
+            Have questions or ready to get started?<br />
+            Contact us today to speak with one of our knowledgeable agents.<br />
+            We're here to help you every step of the way. <br />You can contact
+            us best through calling our office and scheduling an appointment.
+          </p>
 
-		.disclaimer {
-			text-align: center;
-			font-size: 2px;
-		}
-	</style>
-</head>
-
-
-<body>
-	<div class="box-area">
-		<header>
-			<div class="wrapper">
-				<div class="logo">
-					<a href="/index.html">RealityRealtors</a>
-					<img class="logo" src="/images/logo.png" alt="RealityRealtors logo">
-				</div>
-				<nav>
-					<a href="/index.html">Home</a>
-					<a href="/project/buy.html">Buy</a>
-					<a href="#">About</a>
-					<a href="/project/contact.html">Contact</a>
-				</nav>
-			</div>
-		</header>
-		<div class="banner-area">
-			<h2>Placeholder</h2>
-		</div>
-		<div class="content-area">
-			<div class="wrapper">
-				<h2>content area</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, esse est iste magni reprehenderit
-					saepe sint! Assumenda consectetur fugit sit tempore. Architecto blanditiis deleniti, est fuga iusto
-					perspiciatis suscipit voluptatibus! Ad alias assumenda autem deleniti esse est excepturi hic itaque,
-					magnam magni nam officia provident quae recusandae reiciendis rem sed. Adipisci animi aut autem
-					deserunt dolore, ea eius error ex facilis inventore ipsum minus modi nihil nostrum nulla, obcaecati
-					porro reprehenderit repudiandae sed sint sunt tempore vero. At dolores doloribus, dolorum ea eaque
-					hic ipsa iusto libero minus natus neque nisi nobis nostrum odio optio pariatur perspiciatis
-					praesentium rerum sapiente.</p>
-
-
-
-
-
-
-
-
-
-				<!-- Begin Required Disclaimer Text (you may re-style this text) -->
-				<div class="disclaimer">
-					<u><strong>Disclaimer</strong></u><br />
-					THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or UNG<br />
-					HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF THE PAGE IS<br />
-					SOLELY RESPONSIBLE FOR THE CONTENT.<br />
-					<!-- End Required Disclaimer Text -->
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-
+          <!-- Begin Required Disclaimer Text (you may re-style this text) -->
+          <div class="disclaimer">
+            <u><strong>Disclaimer</strong></u
+            ><br />
+            THIS PAGE IS NOT A PUBLICATION OF University of North Georgia or
+            UNG<br />
+            HAS NOT EDITED OR EXAMINED THE CONTENT OF THE PAGE. THE AUTHOR OF
+            THE PAGE IS<br />
+            SOLELY RESPONSIBLE FOR THE CONTENT.<br />
+            <!-- End Required Disclaimer Text -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
